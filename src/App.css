@@ -1,0 +1,105 @@
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  box-sizing: border-box;
+}
+
+.App {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./city.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.advice-box {
+  border: 2px solid black;
+  border-radius: 16px;
+  background-color: whitesmoke;
+  width: 55%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  min-width: 300px;
+  box-shadow: 8px 8px;
+}
+
+.advice-box h1 {
+  font-size: 1.4em;
+  font-weight: lighter;
+}
+.advice-box button {
+  background-color: white;
+  color: steelblue;
+  border-radius: 50px;
+  font-size: 0.6em;
+  margin-top: 15px;
+  padding: 6px 18px;
+  border: 1px solid steelblue;
+  cursor: pointer;
+  outline: none;
+}
+.advice-box button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .advice-box {
+    width: 80%;
+    height: 30%;
+  }
+  .advice-box button {
+    margin-top: 20px;
+  }
+}
